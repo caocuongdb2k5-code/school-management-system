@@ -1,12 +1,15 @@
-import React from 'react';
-import DanhSachSinhVien from './danhsachsinhvien';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Register from "./pages/Register";
+import Info from "./pages/Info";
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <DanhSachSinhVien />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Register />} />
+        <Route path="/info" element={<Info />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
